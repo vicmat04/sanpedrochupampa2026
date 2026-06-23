@@ -821,9 +821,8 @@ body {
     z-index: 10;
 }
 
-/* Indicador flotante 'HOY' */
-.today-highlight::before {
-    content: "★ HOY ★";
+/* Indicador flotante 'HOY' dinámico */
+.today-badge {
     position: absolute;
     top: -12px;
     right: 15px;
@@ -831,14 +830,17 @@ body {
     color: white;
     font-size: 11px;
     font-weight: 800;
-    padding: 3px 10px;
+    padding: 4px 12px;
     border-radius: 20px;
     letter-spacing: 1px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     z-index: 20;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    white-space: nowrap;
 }
 
-/* Respetar el color distintivo en la tarjeta de Novena del día */
+/* Respetar el color en la tarjeta de Novena del día */
 .novena-card.today-highlight {
     border-top: 8px solid var(--accent-color) !important;
     border-left: 2.5px solid var(--accent-color) !important;
@@ -847,7 +849,7 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
 }
 
-.novena-card.today-highlight::before {
+.novena-card.today-highlight .today-badge {
     background-color: var(--accent-color);
     top: -14px;
 }

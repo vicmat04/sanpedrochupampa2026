@@ -63,10 +63,24 @@ function highlightCurrentDay() {
     const day = String(today.getDate()).padStart(2, '0');
     const todayString = `${year}-${month}-${day}`;
 
+    // Limpiar badges anteriores
+    document.querySelectorAll('.today-badge').forEach(badge => badge.remove());
+
     const targets = document.querySelectorAll('[data-date]');
     targets.forEach(target => {
         if (target.getAttribute('data-date') === todayString) {
             target.classList.add('today-highlight');
+            
+            // Crear badge dinámico con el color
+            const color = target.getAttribute('data-color');
+            const badge = document.createElement('span');
+            badge.className = 'today-badge';
+            if (color) {
+                badge.innerText = `hoy color ${color.toLowerCase()}`;
+            } else {
+                badge.innerText = 'hoy';
+            }
+            target.prepend(badge);
         } else {
             target.classList.remove('today-highlight');
         }
