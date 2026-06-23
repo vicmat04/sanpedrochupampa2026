@@ -921,4 +921,10 @@ body {
         flex-direction: column;
         text-align: center;
     }
+    .himno-content {
+        font-size: 17px;
+    }
+    .himno-card-premium {
+        padding: 30px 15px;
+    }
 }
