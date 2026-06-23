@@ -118,7 +118,7 @@ function initVisitorCounter() {
     const counterEl = document.getElementById("visitor-counter");
     if (!counterEl) return;
 
-    fetch("https://api.counterapi.dev/v1/projects/sanpedrochupampa2026/counters/visitas/up")
+    fetch("https://countapi.mileshilliard.com/api/v1/hit/sanpedrochupampa2026_visitas")
         .then(response => response.json())
         .then(data => {
             if (data && data.value) {
