@@ -854,6 +854,54 @@ body {
     top: -14px;
 }
 
+/* MARKETING EN EL HERO (Crédito sutil) */
+.hero-marketing {
+    margin-top: 25px;
+    font-size: 13px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 1px;
+}
+
+.hero-marketing > span {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--gold-light);
+    opacity: 0.85;
+}
+
+.hero-marketing-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    backdrop-filter: blur(2px);
+}
+
+.hero-marketing-link:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: var(--gold);
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.15);
+}
+
+.hero-marketing-logo {
+    max-height: 22px;
+    width: auto;
+    display: block;
+}
+
 /* RESPONSIVE DESIGN (Pantallas grandes y móviles) */
 @media (max-width: 600px) {
     .event-card {
