@@ -76,9 +76,9 @@ function highlightCurrentDay() {
             const badge = document.createElement('span');
             badge.className = 'today-badge';
             if (color) {
-                badge.innerText = `hoy color ${color.toLowerCase()}`;
+                badge.innerText = `★ hoy color ${color.toLowerCase()} ★`;
             } else {
-                badge.innerText = 'hoy';
+                badge.innerText = '★ hoy ★';
             }
             target.prepend(badge);
         } else {
