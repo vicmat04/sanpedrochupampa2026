@@ -91,6 +91,7 @@ function highlightCurrentDay() {
 document.addEventListener('DOMContentLoaded', () => {
     highlightCurrentDay();
     startCapillaCarousel();
+    initVisitorCounter();
 });
 
 // CARRUSEL AUTOMÁTICO DE FOTOS DE LA CAPILLA
@@ -110,4 +111,23 @@ function startCapillaCarousel() {
         // Añadir active al nuevo slide
         slides[currentSlideIndex].classList.add('active');
     }, 4000); // Cambiar cada 4 segundos
+}
+
+// CONTADOR DE VISITAS DINÁMICO Y SUTIL
+function initVisitorCounter() {
+    const counterEl = document.getElementById("visitor-counter");
+    if (!counterEl) return;
+
+    fetch("https://api.counterapi.dev/v1/projects/sanpedrochupampa2026/counters/visitas/up")
+        .then(response => response.json())
+        .then(data => {
+            if (data && data.value) {
+                const formattedValue = Number(data.value).toLocaleString();
+                counterEl.innerHTML = `<i class="fa-solid fa-eye"></i> Visitas: ${formattedValue}`;
+            }
+        })
+        .catch(err => {
+            console.error("Error al obtener contador de visitas:", err);
+            counterEl.style.display = "none";
+        });
 }

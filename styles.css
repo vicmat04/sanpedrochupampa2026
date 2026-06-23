@@ -902,6 +902,28 @@ body {
     display: block;
 }
 
+/* CONTADOR DE VISITAS FOOTER */
+.visitor-counter {
+    font-size: 11px;
+    color: #7f8c8d;
+    margin: 15px 0 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.visitor-counter i {
+    color: var(--gold);
+    opacity: 0.8;
+}
+
 /* RESPONSIVE DESIGN (Pantallas grandes y móviles) */
 @media (max-width: 600px) {
     .event-card {
